@@ -1,12 +1,13 @@
 package com.metlife.arogyasutra.model;
 
+
 public class Customer {
     private int id;
     private String name;
     private int age;
     private String gender;
     private boolean family_history_diabetes;
-    private boolean family_history_vcd;
+    private boolean family_history_cvd;
     private boolean smoking_status;
 
     public Customer() {
