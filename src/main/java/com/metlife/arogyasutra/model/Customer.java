@@ -19,7 +19,7 @@ public class Customer {
         this.age = age;
         this.gender = gender;
         this.family_history_diabetes = family_history_diabetes;
-        this.family_history_vcd = family_history_vcd;
+        this.family_history_cvd = family_history_cvd;
         this.smoking_status = smoking_status;
     }
 
@@ -63,12 +63,12 @@ public class Customer {
         this.family_history_diabetes = family_history_diabetes;
     }
 
-    public boolean isFamily_history_vcd() {
-        return family_history_vcd;
+    public boolean isFamily_history_cvd() {
+        return family_history_cvd;
     }
 
-    public void setFamily_history_vcd(boolean family_history_vcd) {
-        this.family_history_vcd = family_history_vcd;
+    public void setFamily_history_vcd(boolean family_history_cvd) {
+        this.family_history_cvd = this.family_history_cvd;
     }
 
     public boolean isSmoking_status() {
