@@ -26,7 +26,6 @@ public class ArogyaSutraController {
 
     @GetMapping("/calculate")
     public ResponseEntity<CustomerRC> riskCalculator( @RequestBody EmployeeHealthRecord employeeHealthRecord){
-
         CustomerRC score=riskCalculatorService.fetchRiskScores(employeeHealthRecord);
         return ResponseEntity.ok(score);
     }

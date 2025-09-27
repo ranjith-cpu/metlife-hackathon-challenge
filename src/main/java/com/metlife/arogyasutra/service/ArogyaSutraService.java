@@ -32,7 +32,7 @@ public class ArogyaSutraService {
             customerPO.setName(customer.getName());
             customerPO.setGender(customer.getGender());
             customerPO.setSmoking_status(customer.isSmoking_status());
-            customerPO.setFamily_history_cvd(customer.isFamily_history_vcd());
+            customerPO.setFamily_history_cvd(customer.isFamily_history_cvd());
             customerPO.setFamily_history_diabetes(customer.isFamily_history_diabetes());
 
             return  customerPO;

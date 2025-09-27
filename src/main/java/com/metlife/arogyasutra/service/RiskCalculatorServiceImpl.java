@@ -1,5 +1,6 @@
 package com.metlife.arogyasutra.service;
 
+import com.metlife.arogyasutra.exception.RiskCalculatorException;
 import com.metlife.arogyasutra.model.Customer;
 import com.metlife.arogyasutra.model.CustomerRC;
 import com.metlife.arogyasutra.model.EmployeeHealthRecord;
@@ -24,11 +25,11 @@ public class RiskCalculatorServiceImpl implements RiskCalculatorService{
         try {
             CustomerRC response = restTemplate.postForObject(url, employeeHealthRecord, CustomerRC.class);
             if (response == null) {
-                throw new RuntimeException("AI model didn't return a valid response");
+                throw new RiskCalculatorException("AI model didn't return a valid response");
             }
             return response;
         } catch (Exception e) {
-                throw new RuntimeException("Failed to fetch risk scores from AI model");
+                throw new RiskCalculatorException("Failed to fetch risk scores from AI model");
         }
 
     }
