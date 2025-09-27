@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import com.metlife.arogyasutra.constant.ApplicationConstant;
 import com.metlife.arogyasutra.repository.ArogyaSutraRepository;
 import com.metlife.arogyasutra.util.DataSourceConfig;
 
@@ -33,7 +34,7 @@ public class PreventivePlansService {
 		boolean heartProb = false;
 		JdbcTemplate temp = new JdbcTemplate(this.dataSource);
 		Map<String, Object> riskMap = new HashMap<>();
-		riskMap = temp.queryForMap("select riskScoreDiabetes1yr,riskScoreCvd1yr from EmployeeHealthRecord where id = "+id);
+		riskMap = temp.queryForMap(ApplicationConstant.QUERYFORRISKSCORES+id);
 		
 		float diabetsRiskScore = (float) riskMap.get("riskScoreDiabetes1yr");
 		float heatRiskScore = (float) riskMap.get("riskScoreDiabetes1yr");
