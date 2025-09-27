@@ -1,5 +1,6 @@
 package com.metlife.arogyasutra;
 
+import com.metlife.arogyasutra.application.ArogyasutraApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
