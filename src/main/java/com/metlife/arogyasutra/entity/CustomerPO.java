@@ -2,9 +2,11 @@ package com.metlife.arogyasutra.entity;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Table(name = "Customer_Details")
 @Entity
-public class CustomerPO {
+public class CustomerPO implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
