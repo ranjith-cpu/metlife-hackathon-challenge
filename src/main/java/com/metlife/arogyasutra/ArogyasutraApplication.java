@@ -1,4 +1,4 @@
-package com.metlife.arogyasutra.application;
+package com.metlife.arogyasutra;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,8 @@
 package com.metlife.arogyasutra.controller;
 
 import com.metlife.arogyasutra.model.Customer;
+import com.metlife.arogyasutra.service.ArogyaSutraService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,10 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ArogyaSutraController {
 
-    @PostMapping("/customer/details")
-    public ResponseEntity<String> CustomerDetailsPersitance(@RequestBody Customer customer){
+    @Autowired
+    private ArogyaSutraService arogyaSutraService;
 
-        return ResponseEntity.ok("Customer created successfully");
+    @PostMapping("/customer/details")
+    public ResponseEntity<String> CustomerDetailsPersitance(@RequestBody Customer customer) {
+
+        String response = arogyaSutraService.customerDetailPersist(customer);
+
+        return ResponseEntity.ok(response);
 
     }
 }

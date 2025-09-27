@@ -13,13 +13,13 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int id, String name, int age, String gender, boolean family_history_diabetes, boolean family_history_vcd, boolean smoking_status) {
+    public Customer(int id, String name, int age, String gender, boolean family_history_diabetes, boolean family_history_cvd, boolean smoking_status) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.family_history_diabetes = family_history_diabetes;
-        this.family_history_vcd = family_history_vcd;
+        this.family_history_cvd = family_history_cvd;
         this.smoking_status = smoking_status;
     }
 
@@ -64,11 +64,11 @@ public class Customer {
     }
 
     public boolean isFamily_history_vcd() {
-        return family_history_vcd;
+        return family_history_cvd;
     }
 
     public void setFamily_history_vcd(boolean family_history_vcd) {
-        this.family_history_vcd = family_history_vcd;
+        this.family_history_cvd = family_history_vcd;
     }
 
     public boolean isSmoking_status() {
